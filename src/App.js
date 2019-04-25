@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Topbar from "./components/Topbar";
+import Navbar from "./components/Navbar";
+import PageFooter from "./components/PageFooter";
+
+import PageHome from "./pages/Home";
+import PageCatalog from "./pages/Catalog";
+import PageBrand from "./pages/Brand";
+import PageLocalStores from "./pages/LocalStores";
+import PageLookBook from "./pages/LookBook";
+import "./sass/app.sass";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+      <header className="page-header">
+        <Topbar />
+        <Navbar />
       </header>
-    </div>
+
+      <main className="page-content">
+        <Route exact path="/" component={PageHome} />
+        <Route path="/catalog" component={PageCatalog} />
+        <Route path="/brand" component={PageBrand} />
+        <Route path="/local-stores" component={PageLocalStores} />
+        <Route path="/look-book" component={PageLookBook} />
+      </main>
+
+      <PageFooter />
+    </Router>
   );
 }
 
