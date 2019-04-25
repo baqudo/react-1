@@ -1,25 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../sass/components/topbar.sass";
 
 export default class Topbar extends React.Component {
   render() {
     return (
       <div className="topbar">
-        <div className="topbar__inner">
+        <div className="topbar__inner container">
           <div className="topbar__currency">Currency : GBP </div>
-          <div className="topbar__nav">
+          <ul className="topbar__nav">
             <li>
-              <Link to="/login">Register</Link>
+              <NavLink className="topbar__link" to="/login">Register</NavLink>
             </li>
             <li>
-              <Link to="/login">Sign In</Link>
+              <NavLink className="topbar__link" to="/login">Sign In</NavLink>
             </li>
-          </div>
-
-          <div className="topbar__cart">
-            empty   
-          </div>
+            <li>
+              <div className="topbar__cart">
+                empty   
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     );

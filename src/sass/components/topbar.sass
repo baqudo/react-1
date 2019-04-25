@@ -1,9 +1,21 @@
 .topbar
     background: #333333
-
-    &__link
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__nav
+        display: flex
+        align-items: center
+    &__link, &__currency
         color: #999999
         font-size: 13px
         font-weight: 400
         line-height: 20px
         text-decoration: none
+        padding: 12px
+    &__cart
+        // width: 147px
+        // height: 46px
+        background-color: #00c8c8
+        padding: 12px 24px
