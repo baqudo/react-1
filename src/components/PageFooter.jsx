@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import "../sass/page-footer.sass";
+import "../sass/components/page-footer.sass";
 
 const footerList = [
   {
@@ -69,8 +69,8 @@ export default function PageFooter({ title, subtitle }) {
                     {item.links.map((link, idx) => {
                       const url = "/" + link.replace(/\s+/g, "-").toLowerCase();
                       return (
-                        <li>
-                          <Link to={url} key={idx}>
+                        <li key={idx}>
+                          <Link to={url}>
                             {link}
                           </Link>
                         </li>
@@ -85,11 +85,13 @@ export default function PageFooter({ title, subtitle }) {
           <div className="page-footer__blocks" />
         </div>
       </div>
-      <div className="page-footer">
-        <div className="page-footer__copy">© 2016 Avenue Fashion™</div>
-        <div className="page-footer__dev">
-          <span>Design by RobbyDesigns.com</span>
-          <span>Dev by Loremipsum.com</span>
+      <div className="page-footer__bar">
+        <div className="page-footer__inner container">
+          <div className="page-footer__copy">© 2016 Avenue Fashion™</div>
+          <div className="page-footer__dev">
+            <span>Design by RobbyDesigns.com</span>
+            <span>Dev by Loremipsum.com</span>
+          </div>
         </div>
       </div>
     </footer>

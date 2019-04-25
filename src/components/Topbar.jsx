@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../sass/topbar.sass";
+import "../sass/components/topbar.sass";
 
 export default class Topbar extends React.Component {
   render() {

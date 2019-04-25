@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
-import "../sass/navbar.sass";
+import "../sass/components/navbar.sass";
 
 export default function Nav() {
   const navList = [

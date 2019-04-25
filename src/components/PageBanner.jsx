@@ -1,5 +1,5 @@
 import React from "react";
-import "../sass/page-banner.sass";
+import "../sass/components/page-banner.sass";
 
 export default function PageBanner({ title, subtitle }) {
   return (
