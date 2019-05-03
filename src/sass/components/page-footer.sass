@@ -25,7 +25,26 @@
     &__dev
         span+span
             margin-left: 2em
-
+    &__blocks
+        display: flex
+        justify-content: space-between
+        margin-top: 60px
+    &__block
+        flex-grow: 1
+        height: 200px
+        background-color: #333333
+        color: #ffffff
+        font-size: 36px
+        font-weight: 300
+        line-height: 48px
+        text-transform: uppercase
+        letter-spacing: 1.8px
+        text-align: center
+        padding: 60px 20px
+        &+&
+            margin-left: 30px
+    &__socials
+        background-color: #00c8c8
 .footer-list
     color: #727272
     font-size: 14px

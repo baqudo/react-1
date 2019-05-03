@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../sass/components/page-footer.sass";
 
 const footerList = [
@@ -54,7 +55,20 @@ const footerList = [
     ]
   }
 ];
-
+const socials = [
+  {
+    icon: "facebook-f"
+  },
+  {
+    icon: "twitter"
+  },
+  {
+    icon: "instagram"
+  },
+  {
+    icon: "pinterest"
+  }
+]
 export default function PageFooter({ title, subtitle }) {
   return (
     <footer className="page-footer">
@@ -82,7 +96,19 @@ export default function PageFooter({ title, subtitle }) {
             })}
           </div>
 
-          <div className="page-footer__blocks" />
+          <div className="page-footer__blocks">
+            <div className="page-footer__block">
+              <b>award winner</b>
+              <div>fashion awards 2016</div>
+            </div>
+            <div className="page-footer__block page-footer__socials">
+              {
+                socials.map((item, index) => {
+                  return <Link key={index}><FontAwesomeIcon icon={item.icon}/></Link>
+                })
+              }
+            </div>
+          </div>
         </div>
       </div>
       <div className="page-footer__bar">

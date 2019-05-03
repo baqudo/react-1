@@ -1,5 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons';
+
 import Topbar from "./components/Topbar";
 import Navbar from "./components/Navbar";
 import PageFooter from "./components/PageFooter";
@@ -10,6 +13,9 @@ import PageBrand from "./pages/Brand";
 import PageLocalStores from "./pages/LocalStores";
 import PageLookBook from "./pages/LookBook";
 import "./sass/app.sass";
+
+library.add(faStroopwafel);
+
 
 function App() {
   return (
